@@ -1,7 +1,8 @@
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-TOKEN = 'YOUR_BOT_TOKEN_HERE'
+TOKEN = os.environ.get("TOKEN")  # Читаємо токен із середовища
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("👋 Привіт! Я бот-гарант. Введи /newdeal для початку нової угоди.")
