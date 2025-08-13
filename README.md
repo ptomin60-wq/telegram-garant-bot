@@ -1,1 +1,0 @@
-# telegram-garant-bot
